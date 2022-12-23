@@ -1,4 +1,4 @@
-const { Quizz } = require('../Services/db');
+const { Quizz, TypeOfQuestions } = require('../Services/db');
 
 const list = async (req, res, next) => {
   const listResult = await Quizz.find({});
@@ -28,9 +28,18 @@ const edit = async (req, res, next) => {
   next();
 };
 
+const typeOfQuestion = async (req, res, next) => {
+  const questionsTypeResult = await TypeOfQuestions.find({});
+  res.locals.status = 200;
+  res.locals.message = questionsTypeResult;
+
+  next();
+};
+
 module.exports = {
   list,
   add,
   remove,
   edit,
+  typeOfQuestion,
 };

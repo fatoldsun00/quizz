@@ -13,5 +13,6 @@ quizzRouter.route('/').get(quizzController.list);
 quizzRouter.route('/add').post(quizzController.add);
 quizzRouter.route('/delete').delete(quizzController.remove);
 quizzRouter.route('/edit').patch(quizzController.edit);
+quizzRouter.route('/typeOfQuestion').patch(quizzController.typeOfQuestion);
 
 module.exports = quizzRouter;

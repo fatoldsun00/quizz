@@ -33,7 +33,6 @@ app.use(i18n.init);
 
 // routes
 app.use('/api', require('./src/Routes/index'));
-app.use('/demo', require('./src/Routes/demo'));
 
 app.listen(port, '127.0.0.1', (err) => {
   console.log(`Running on PORT: ${port}`);
